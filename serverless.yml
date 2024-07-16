@@ -10,7 +10,7 @@ provider:
 
 functions:
   handler:
-    handler: handler.handler  # Ensure this path matches your handler function's location
+    handler: handler  # Ensure this path matches your handler function's location
     events:
       - http:
           path: hello
