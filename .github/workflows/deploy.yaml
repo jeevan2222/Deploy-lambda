@@ -1,4 +1,4 @@
-name: lambda-deployment-with-github-action-test
+name: Deploy-lambda
 
 on: 
   push:
