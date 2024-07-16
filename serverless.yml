@@ -1,7 +1,10 @@
 service: Deploy-lambda
 
 plugins:
-  - serverless-webpack
+    - serverless-webpack
+    # - serverless-webpack-prisma (eventually)
+    - serverless-plugin-typescript
+    - serverless-offline
 
 provider:
   name: aws
