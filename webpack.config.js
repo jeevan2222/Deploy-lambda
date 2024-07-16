@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/handler.js', // Adjust this path if your handler file is located elsewhere
+  entry: './handler.js', // Adjusted to match the root directory
   target: 'node',
   module: {
     rules: [

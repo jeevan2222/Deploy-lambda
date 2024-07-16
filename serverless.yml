@@ -5,12 +5,12 @@ plugins:
 
 provider:
   name: aws
-  runtime: nodejs20.x  # Adjust as per your requirements
-  region: us-west-2    # Your preferred AWS region
+  runtime: nodejs20.x
+  region: us-west-2
 
 functions:
   handler:
-    handler: handler  # Ensure this path matches your handler function's location
+    handler: dist/handler.handler  # Ensure this matches the output file
     events:
       - http:
           path: hello
@@ -18,4 +18,4 @@ functions:
 
 custom:
   webpack:
-    webpackConfig: webpack.config.js  # Path to your webpack configuration file
+    webpackConfig: webpack.config.js
