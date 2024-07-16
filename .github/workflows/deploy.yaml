@@ -18,7 +18,10 @@ jobs:
           node-version: '20.x'
        
       - name: Install specific version of serverless globally
-        run: npm install -g serverless@1.74.1 # Replace with an older version that doesn't require interactive login
+        run: npm install -g serverless@1.74.1 # Replace with your desired version
+
+      - name: Install serverless-webpack plugin
+        run: npm install serverless-webpack
 
       - name: Configure AWS credentials
         run: |

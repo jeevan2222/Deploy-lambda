@@ -1,5 +1,6 @@
-service: my-lambda-service
-
+service: Deploy-lambda
+plugins:
+  - serverless-webpack
 provider:
   name: aws
   runtime: nodejs20.x
