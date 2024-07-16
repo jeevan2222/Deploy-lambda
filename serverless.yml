@@ -5,13 +5,12 @@ plugins:
 
 provider:
   name: aws
-  runtime: nodejs14.x # Adjust the runtime version as per your requirement
-  region: us-west-2 # Specify your preferred AWS region
-  # Add other provider configurations as needed
+  runtime: nodejs20.x  # Adjust as per your requirements
+  region: us-west-2    # Your preferred AWS region
 
 functions:
   handler:
-    handler: handler.handler
+    handler: handler.handler  # Ensure this path matches your handler function's location
     events:
       - http:
           path: hello
