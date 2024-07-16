@@ -15,6 +15,7 @@ functions:
       - http:
           path: hello
           method: get
+
 custom:
   webpack:
-    webpackConfig: ./webpack.config.js          
+    webpackConfig: ./webpack.config.js  # Path to your webpack configuration file
