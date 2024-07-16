@@ -1,10 +1,7 @@
 service: Deploy-lambda
 
 plugins:
-    - serverless-webpack
-    # - serverless-webpack-prisma (eventually)
-    - serverless-plugin-typescript
-    - serverless-offline
+  - serverless-webpack
 
 provider:
   name: aws
@@ -21,4 +18,4 @@ functions:
 
 custom:
   webpack:
-    webpackConfig: ./webpack.config.js  # Path to your webpack configuration file
+    webpackConfig: webpack.config.js  # Path to your webpack configuration file
