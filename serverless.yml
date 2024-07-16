@@ -1,5 +1,3 @@
-# serverless.yml
-
 service: Deploy-lambda
 
 plugins:
@@ -7,8 +5,9 @@ plugins:
 
 provider:
   name: aws
-  runtime: nodejs20.x
-  region: us-west-2 # or your preferred region
+  runtime: nodejs14.x # Adjust the runtime version as per your requirement
+  region: us-west-2 # Specify your preferred AWS region
+  # Add other provider configurations as needed
 
 functions:
   handler:
