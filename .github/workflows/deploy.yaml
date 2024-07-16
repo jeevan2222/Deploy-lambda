@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master
-  
+
 jobs:
   lambda-deploy:
     runs-on: ubuntu-latest
@@ -16,16 +16,19 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '20.x'
-          
-      - name: Install specific version of serverless globally
-        run: npm install -g serverless@3.0.0 # Replace with an older version that doesn't require authentication
+       
+      - name: Install serverless globally
+        run: npm install -g serverless
+   
+      - name: Authenticate Serverless
+        run: serverless login
 
       - name: Configure AWS credentials
         run: |
           serverless config credentials --provider aws --key ${{ secrets.AWS_ACCESS_KEY_ID }} --secret ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
       - name: Install npm dependencies
-        run: npm ci
-     
+        run: npm install && npm ci
+  
       - name: Deploy lambda function
         run: serverless deploy
