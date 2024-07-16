@@ -1,0 +1,17 @@
+service: my-lambda-service
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: us-west-2 # or your preferred region
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: hello
+          method: get
+
+plugins:
+  - serverless-webpack
