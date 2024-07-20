@@ -33,16 +33,6 @@ jobs:
           npx ncc build handle.js  
           zip -j deploy.zip ./dist/*
           aws lambda update-function-code --function-name=Deploy-lambda --zip-file=fileb://deploy.zip
-      #npx ncc handle.js  this commnd will create buddle of to run deplay lamda
-      #   run: npm install -g serverless@1.74.1 # Replace with your desired version
-
-      # - name: Install serverless-webpack plugin
-      #   run: npm install serverless-webpack
-
-      - name: Configure AWS credentials
-        run: |
-          serverless config credentials --provider aws --key ${{ secrets.AWS_ACCESS_KEY_ID }} --secret ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-
       # - name: Install npm dependencies
       #   run: npm ci
 
